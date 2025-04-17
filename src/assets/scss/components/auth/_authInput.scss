@@ -1,0 +1,6 @@
+.fm-auth-input {
+  &[id='password'],
+  &[id='passwordConfirmation'] {
+    padding-right: 50px;
+  }
+}

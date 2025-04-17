@@ -1,0 +1,17 @@
+// BASE
+@import 'bootstrap/scss/bootstrap';
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+@import './base/fonts';
+@import './base/vars';
+@import './base/mixins';
+@import './base/base';
+
+// COMPONENTS
+@import './components/auth/authEyeIcon';
+@import './components/auth/authInput';
+@import './components/auth/authMainStructure';
+@import './components/ui/appMovieCard';
+@import './components/ui/appLoader';
+@import './components/movie/movie';
+@import './components/movie/movieStarIcon';
+@import './components/theNavbar';

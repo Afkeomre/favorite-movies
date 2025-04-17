@@ -1,0 +1,47 @@
+.fm-app-movie-card {
+  &__img-wrapper {
+    height: 400px;
+  }
+
+  &.clickable {
+    cursor: pointer;
+
+    &:hover {
+      .fm-app-movie-card__img-wrapper::before {
+        opacity: 0;
+      }
+
+      .fm-app-movie-card__img {
+        transform: scale(1.02);
+      }
+    }
+
+    .fm-app-movie-card__img-wrapper {
+      &::before {
+        content: '';
+        @include absolute-fill;
+        background: linear-gradient(to top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 15%);
+        opacity: 1;
+        z-index: 1;
+        transition: opacity 0.4s ease-in-out;
+        pointer-events: none;
+        will-change: opacity;
+      }
+    }
+
+    .fm-app-movie-card__img {
+      transition: transform 0.4s ease-in-out;
+      will-change: transform;
+    }
+
+    .fm-app-movie-card__description {
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      line-clamp: 3;
+      -webkit-box-orient: vertical;
+      -webkit-mask-image: linear-gradient(180deg, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0));
+      mask-image: linear-gradient(180deg, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0));
+    }
+  }
+}

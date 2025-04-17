@@ -1,0 +1,29 @@
+.fm-auth-main-structure {
+  &__row {
+    &.signup {
+      flex-direction: row-reverse;
+    }
+  }
+
+  &__col {
+    &.signin {
+      height: 60%;
+    }
+
+    &.signup {
+      height: 75%;
+    }
+
+    &_details {
+      @include bg-cover;
+
+      &.signin {
+        background-image: url('/img/signin.jpg');
+      }
+
+      &.signup {
+        background-image: url('/img/signup.jpg');
+      }
+    }
+  }
+}

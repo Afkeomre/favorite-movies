@@ -1,0 +1,17 @@
+.fm-movie-star-icon {
+  color: goldenrod;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+
+  &.selected {
+    transform: scale(1.1);
+    color: gold;
+  }
+
+  &:active,
+  &:has(~ .fm-movie-star-icon:active),
+  &.selected:active {
+    transform: scale(1.3);
+    color: goldenrod;
+  }
+}
