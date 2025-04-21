@@ -3,6 +3,7 @@ import { defineStore } from 'pinia';
 
 export const useMessageStore = defineStore('messageStore', () => {
   const message = ref(null);
+  const hasImgMessage = ref(false);
   let timeoutId = null;
 
   const clearMessage = () => {
@@ -28,6 +29,7 @@ export const useMessageStore = defineStore('messageStore', () => {
 
   return {
     message,
+    hasImgMessage,
     setMessage,
     clearMessage,
   };

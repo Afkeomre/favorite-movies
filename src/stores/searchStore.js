@@ -2,6 +2,7 @@ import { defineStore } from 'pinia';
 import { ref, computed } from 'vue';
 import axios from 'axios';
 import { useMessageStore } from './messageStore';
+import error from '@/utils/error';
 
 const baseUrl = 'https://api.themoviedb.org/3/search/movie?query=';
 const detailUrl = 'https://api.themoviedb.org/3/movie/';
@@ -37,10 +38,17 @@ export const useSearchStore = defineStore('searchStore', () => {
 
       findingMovies.value = detailData;
     } catch (e) {
-      messageStore.setMessage({
-        value: e.response.data.status_message,
-        type: 'danger',
-      });
+      if (e.code === 'ERR_NETWORK') {
+        messageStore.setMessage({
+          value: error(e.code),
+          type: 'danger',
+        });
+      } else if (e.response.data) {
+        messageStore.setMessage({
+          value: e.response.data.status_message,
+          type: 'danger',
+        });
+      }
 
       throw e;
     }

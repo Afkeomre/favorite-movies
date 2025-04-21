@@ -5,6 +5,7 @@
 	import { useMessageStore } from '@/stores/messageStore';
 	import { useModalStore } from '@/stores/modalStore';
 	import { useLoadingStore } from '@/stores/loadingStore';
+	import error from '@/utils/error';
 	import MovieStarIcon from '@/components/movie/MovieStarIcon.vue';
 	import AppModal from '@/components/ui/AppModal.vue';
 	import AppMessage from '@/components/ui/AppMessage.vue';
@@ -36,6 +37,15 @@
 			loadingStore.showLoader();
 			chosenMovie.value = await movieStore.loadMovieById(props.id);
 			hoveredRating.value = chosenMovie.value.rating;
+
+			const img = new Image();
+			img.onerror = () => {
+				messageStore.setMessage({
+					value: error('backdrop_locked'),
+					type: 'danger',
+				});
+			}
+			img.src = backdropPath.value;
 		} catch (e) {
 		} finally {
 			loadingStore.hideLoader();
