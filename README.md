@@ -1,85 +1,75 @@
 # 🎬 Favorite Movies App
 
-A responsive Vue 3 web application for managing a personal collection of favorite movies.  
-Users can register, log in, search for movies via TMDB, and create their own collection with ratings and reviews.
+Адаптивное веб-приложение на Vue 3 для управления личной коллекцией любимых фильмов.  
+Пользователи могут регистрироваться, входить в систему, искать фильмы в TMDB и создавать свою собственную коллекцию с рейтингами и рецензиями.
 
-## 🌐 Website
+## 🌐 Веб-сайт
 
-You can watch the website online [here](https://favorite-movies-pi.vercel.app).
+Вы можете посмотреть веб-сайт онлайн [здесь](https://favorite-movies-pi.vercel.app).
 
-## 🚀 Features
+## 🚀 Особенности
 
-- 🔐 **Authentication & Authorization** via Firebase Auth (REST API)
-- 📁 **Personal Movie Collections** stored in Firebase Realtime Database
-- 🔍 **Search & Filtering** by title, rating, and release year
-- ✍️ **User Reviews & Ratings** for each movie
-- 🔄 **Real-time Editing** of personal collections
-- 👨‍💻 Two pre-made test users for quick access & experimentation
+- 🔐 **Аутентификация и авторизация** пользователей
+- 📁 **Личные коллекции фильмов** 
+- 🔍 **Поиск и фильтрация** по названию, рейтингу и году выпуска
+- ✍️ **Рецензии пользователей и рейтинги** для каждого фильма
+- 🔄 **Редактирование личных коллекций** 
+- 👨‍💻 **Два тестовых пользователя** для быстрого доступа и экспериментов
 
-> ⚠️ **Authorization is required** to access core functionality.
+> ⚠️ **Для доступа к основным функциям требуется авторизация**.
 
-> ⚠️ **The Movie Database may be blocked** in your region. If that happens, the website will notify you. Using a VPN is a simple way to solve this issue.
+> ⚠️ **The Movie Database может быть заблокирована** в вашем регионе. В этом случае вы получите уведомление от веб-сайта. Использование VPN решит проблему.
 
-## 🛠️ Tech Stack
+## 🛠️ Технический стек
 
 - **Vue 3** + **Vue Router**
-- **Vite** for fast development and builds
-- **Pinia** for state management
-- **Axios** for API communication
-- **SCSS** + **Bootstrap** for responsive UI
-- **VeeValidate** + **Yup** for form validation
-- **TMDB API** for movie data
-- **Firebase Authentication** via REST API for secure user login and registration
-- **Firebase Realtime Database** for collections storage
+- **Vite** для быстрой разработки и сборки
+- **Pinia** для управления состоянием
+- **Axios** для взаимодействия с API
+- **SCSS** + **Bootstrap**  для адаптивного UI
+- **VeeValidate** + **Yup** для валидации форм
+- **TMDB API** для данных о фильмах
+- **Firebase Authentication** через REST API для безопасного входа и регистрации пользователей
+- **Firebase Realtime Database** для хранения коллекций
 
-## 👨‍💻 Test Users
+## 👨‍💻 Тестовые пользователи
 
-You can log in with either of these accounts to explore functionality:
+Вы можете войти в систему с любой из этих учетных записей, чтобы изучить функциональность:
 
-- **User 1**  
+- **Пользователь 1**  
   Email: `test@mail.ru`  
   Password: `123456`
 
-- **User 2**  
+- **Пользователь 2**  
   Email: `test2@mail.ru`  
   Password: `1234567`
 
-Or register your own account to create a personal collection.
+Или зарегистрируйте свой аккаунт, чтобы создать личную коллекцию.
 
-## 📎 Project Highlights
+## 📎 Ключевые моменты
 
-- Clean and scalable codebase with separation of concerns
-- Full CRUD for movies tied to user authentication
-- Real-time data synchronization
-- Mobile-first responsive layout
-- Custom form validation & error handling
-- Logout UI update and route protection
+- Чистая и масштабируемая кодовая база с разделением задач
+- Полный CRUD для фильмов, привязанный к аутентификации пользователя
+- Синхронизация данных в режиме реального времени
+- Адаптивная верстка для мобильных устройств
+- Проверка пользовательских форм и обработка ошибок
+- Обновление UI при выходе из системы и защита маршрута
 
 ---
-
-This template should help get you started developing with Vue 3 in Vite.
-
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
+## ⚙️ Запуск проекта
+### Установка зависимостей:
 
 ```sh
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+### Запуск в режиме разработки:
 
 ```sh
 npm run dev
 ```
 
-### Compile and Minify for Production
+### Сборка для продакшена:
 
 ```sh
 npm run build
